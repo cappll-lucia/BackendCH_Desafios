@@ -38,7 +38,7 @@ class Controller{
             let productsListFile = JSON.stringify(productsList, null, 2);
             await fs.promises.writeFile(this.url, productsListFile);
             console.log("Objeto guardado.");
-            return obj.id;
+            return obj;
         } catch (error) {
             console.log("Error --> ", error);
         }
