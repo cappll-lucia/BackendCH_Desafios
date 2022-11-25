@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga Productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .contenedor{
+            max-width: 700px;
+            margin: 40px auto;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Carga</h1>
+        <form action="http://localhost:8080/api/productos" method="post">
+            <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label">ID</label>
+                <input type="text" name="id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label">Título</label>
+                <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label">Precio</label>
+                <input type="text" name="price" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label">URL Imagen</label>
+                <input type="text" name="imgUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

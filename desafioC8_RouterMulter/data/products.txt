@@ -1,11 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Carpeta",
-    "price": 560.5,
-    "imgUrl": "./desktop/images/carpeta.jpg"
-  },
-  {
     "id": 2,
     "title": "Cartuchera",
     "price": 850.3,
@@ -28,5 +22,17 @@
     "price": 100,
     "imgUrl": "./desktop/images/lapiz.jpg",
     "id": 5
+  },
+  {
+    "id": 6,
+    "title": "Paraguas",
+    "price": "400",
+    "imgUrl": "./desktop/images/paraguas.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Botella",
+    "price": 360,
+    "imgUrl": "./desktop/images/botella.jpg"
   }
 ]

@@ -48,7 +48,10 @@ class Controller{
         try {
             const productsList = await this.getAll();
             let prod = productsList.find(p => p.id==id);
-            return prod;
+            if(prod){
+                return prod;
+            }
+            else return [{error: 'Producto no encontrado'}];
         } catch (error) {
             console.log("Error --> ", error);
         }
@@ -64,12 +67,39 @@ class Controller{
                 return "Eliminado con exito";
             }
             else{
-                return "No hay elementos";
+                return [{error: 'Producto no encontrado'}];
             }
         } catch (error) {
             console.log("Error --> ", error);
         }
     }
+
+
+    async updateByID(id, prod){
+        try{
+            let productsList = await this.getAll();
+            if(productsList.length!=0){
+                let myProd = productsList.find(p=> p.id== id);
+                if(myProd){
+                    myProd.price = prod.price;
+                    myProd.title = prod.title;
+                    myProd.imgUrl= prod.imgUrl;
+
+                    let newList = productsList.filter(p=>p.id!=id);
+                    newList.push(myProd);
+                    let newListFile = JSON.stringify(newList, null, 2);
+                    await fs.promises.writeFile(this.url, newListFile);
+                    return ["Producto actualizado con exito", myProd];
+                }
+                else return [{error: 'Producto no encontrado'}];                
+            }
+            else return [{error: 'Producto no encontrado'}];
+        }
+        catch (error){
+            console.log("Error --> ", error)
+        }
+    }
+
 }
 
 

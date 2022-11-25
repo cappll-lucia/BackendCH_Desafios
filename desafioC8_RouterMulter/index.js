@@ -6,6 +6,8 @@ const PORT = 8080;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+app.use(express.static('html'));
+
 
 let serverRoutes = require('./routes');
 

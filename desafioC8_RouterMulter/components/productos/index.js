@@ -41,19 +41,15 @@ module.exports=(app)=>{
         response.send(result);
     })
 
-
     routerProds.put("/:id", async(request, response, next)=>{
-        let result = products.save(req.body)
-        if(result.length > 0){
-            res.send(`
-            El producto : ${JSON.stringify(result[1])}\n\n
-            reemplazado por : ${JSON.stringify(result[0])}
-            en el posicion : ${result[0].id}
-            `)
+        let id=request.params.id;
+        let prod = request.body;
+        let rta = await controllerProds.updateByID(id, prod);
+        if(rta){
+            response.send({rta})
         }
         else{
-            res.sendStatus(400)
+            response.sendStatus(400);
         }
     })
-
 }
