@@ -1,0 +1,25 @@
+    <div class="contenedor">
+        <h1>Carga de Productos</h1>
+        <form action="/productos" method="post">
+            <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label">ID</label>
+                <input type="text" name="id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label">Título</label>
+                <input type="text" name="title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label">Precio</label>
+                <input type="text" name="price" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-6">
+                <label for="exampleInputEmail1" class="form-label">URL Imagen</label>
+                <input type="text" name="imgUrl" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <br/>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+
+    <a href="./products.handlebars" class="btn btn-primary">Ver productos registrados</a>

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 2,
+    "title": "Cartuchera",
+    "price": 850.3,
+    "imgUrl": "./desktop/images/cartuchera.jpg"
+  },
+  {
+    "title": "Mochila",
+    "price": 3045,
+    "imgUrl": "./desktop/images/mochila.jpg",
+    "id": 3
+  },
+  {
+    "title": "Mate",
+    "price": 473,
+    "imgUrl": "./desktop/images/mate.jpg",
+    "id": 4
+  },
+  {
+    "title": "Lapiz",
+    "price": 100,
+    "imgUrl": "./desktop/images/lapiz.jpg",
+    "id": 5
+  },
+  {
+    "id": 6,
+    "title": "Paraguas",
+    "price": "400",
+    "imgUrl": "./desktop/images/paraguas.jpg"
+  },
+  {
+    "id": 1,
+    "title": "Botella",
+    "price": 360,
+    "imgUrl": "./desktop/images/botella.jpg"
+  }
+]

@@ -22,6 +22,18 @@ module.exports=(app)=>{
         response.send(prod);
     })
 
+    routerProds.post('/productos', async(request, response, next)=>{
+        let prod = request.body;
+        if(prod){
+            await controllerProds.save(prod);
+            console.log(`Guardado con éxito ${JSON.stringify(prod)}`);
+            response.redirect('/');
+        }
+        else{
+            response.sendStatus(400);
+        }
+    })
+
 
     routerProds.post("/", async(request, response, next)=>{
         let prod = request.body;
