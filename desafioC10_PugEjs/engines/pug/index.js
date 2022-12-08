@@ -3,15 +3,13 @@
 const { request, response } = require('express');
 let express = require('express');
 let app = express();
-const PORT= 3031;
+const PORT= 8080;
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-let hbs= require('express-handlebars');
-app.engine('handlebars', hbs.engine());
 app.set('views', './views/layout');
-app.set('view engine', 'handlebars');
+app.set('view engine', 'pug');
 app.use(express.static('public'))
 
 
@@ -20,12 +18,12 @@ let controllerProds = new Controller('../../data/products.txt');
 
 
 app.get('/', (request, response, next)=>{
-    response.render('formulario', {});
+    response.render('formulario.pug', {});
 })
 
 app.get('/productos', async(request, response, next)=>{
     let products = await controllerProds.getAll();
-    response.render('products', {products});
+    response.render('products.pug', {products});
 })
 
 app.post('/productos', async(request, response, next)=>{
@@ -34,6 +32,9 @@ app.post('/productos', async(request, response, next)=>{
         await controllerProds.save(prod);
         console.log(`Registrado con éxito`);
         response.redirect('/');
+    }
+    else{
+        response.sendStatus(400);
     }
 })
 
