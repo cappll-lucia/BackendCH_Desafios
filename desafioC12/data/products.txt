@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Paraguas",
+    "price": 1800,
+    "src": "/desktop/paragua.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Piluso",
+    "price": 3200,
+    "src": "/desktop/paragua.jpg"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2022-12-07",
+    "mail": "lule@gmail.com",
+    "text": "Hola me llamo Lucía"
+  },
+  {
+    "date": "2022-12-07",
+    "mail": "juan@gmail.com",
+    "text": "Mi apellido es Cappellini"
+  }
+]
