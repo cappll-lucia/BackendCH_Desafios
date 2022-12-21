@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "timeStamp": "18/12/2022",
+        "title": "Blaze General",
+        "cathegory": "Sol",
+        "description": "General se pone al día con las tendencias con la moderna estructura Blaze. Manda un mensaje concreto con las audaces lentes planas con una montura distintiva con doble puente plano, patillas planas y forma cuadrada. Además del verde clásico y de las opciones degradadas están disponibles nuevas lentes para completar estas gafas de sol innovadoras y street-ready que harán que te destaques de la multitud.",
+        "imgUrl": [
+            "./resources/gallery/sol_BlazeGeneral_0.jpg",
+            "./resources/gallery/sol_BlazeGeneral_1.jpg"
+        ],
+        "price": 32000,
+        "stock": 5
+    
+    }
+]
