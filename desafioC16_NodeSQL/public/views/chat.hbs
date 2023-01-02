@@ -1,1 +1,9 @@
-{{#if chat.length}}
+{{#if chatList.length}}
+    {{#each chatList}}
+            <div class="message">
+                    <p class="usr">{{this.usr}}</p>
+                    <p class="date">{{this.dateTime}}</p>
+                    <p class="msjContent">{{this.msjContent}}</p>
+                </div>
+    {{/each}}
+{{/if}}

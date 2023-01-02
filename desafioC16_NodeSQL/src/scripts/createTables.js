@@ -8,9 +8,9 @@ try{
     .finally(async ()=>{
         return await sqliteCli.schema.createTable('chat', table=>{
             table.increments('id').primary();
-            table.string('usr', 20).notNulleable();
-            table.string('dateTime', 50).notNulleable();
-            table.string('msjContent', 200).notNulleable();
+            table.string('usr', 20).notNullable();
+            table.string('dateTime', 50).notNullable();
+            table.string('msjContent', 200).notNullable();
         console.log('Tabla chat Creada con exito');
 
         })

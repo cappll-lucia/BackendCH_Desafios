@@ -44,6 +44,25 @@ socket.on('connect', ()=>{
 });
 
 socket.on('updateProds', prods=>{
-    fetch()
+    fetch('http://localhost:8080/views/products.hbs')
+        .then(response=>{
+            return response.text();
+        })
+        .then(plantilla=>{
+            let template = Handlebars.compile(plantilla);
+            let html = template({prods});
+            document.getElementById('productsList').innerHTML= html;
+        })
+})
 
+socket.on('updateChat', chats=>{
+    fetch('http://localhost:8080/views/chat.hbs')
+        .then (response=>{
+            return response.text();
+        })
+        .then (plantilla=>{
+            let template = Handlebars.compile(plantilla);
+            let html= template({chats});
+            document.getElementById('chatChild').innerHTML=html;
+        })
 })
