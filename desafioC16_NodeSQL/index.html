@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Desafio Clase 16</title>
+    <link rel="stylesheet" href="./public/styles.css">
+</head>
+<body>
+    <!-- <h1>Desafio Clase 16</h1> -->
+    <main class="main">
+        <section id="productSection" class="productSection">
+            <div class="products_form">
+                <h6>Datos del producto a registrar</h6>
+                <form action="" method="post">
+                    <div class="form-group row">
+                        <label for="id" class=" form_label">ID</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" name="name" id="id" placeholder="ID" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="title" class=" form_label">Título</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Titulo" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="price" class=" form_label">Precio</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control"  name="price" id="price" placeholder="Precio" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="imgUrl" class=" form_label">URL Imagen</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="imgUrl" id="imgUrl" placeholder="URL Imagen" required>
+                        </div>
+                    </div>
+                    <div><button class="btn btn-primary" type="submit">Registrar Producto</button></div>
+                </form>
+            </div>  
+        </section>
+        <section id="chatSection" class="chatSection">
+            <div id="chat" class="chat">
+                <div class="message">
+                    <p class="usr">name</p>
+                    <p class="date">date</p>
+                    <p class="msjContent">content</p>
+                </div>
+                <div class="message">
+                    <p class="usr">name</p>
+                    <p class="date">date</p>
+                    <p class="msjContent">content</p>
+                </div>
+            </div>
+            <form action="" id="chatForm" method="post">
+                <input type="text" class="form-control usrName" name="usrName" id="usrName" placeholder="Nombre de Usuario" required>
+                <input type="text" class="form-control email" name="email" id="email" placeholder="Email" required>
+                <input type="text" class="form-control msjText" name="msjText" id="msjText" placeholder="Mensaje..." required>
+                <button type="submit" id="sendBtn" class="btn btn-primary">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

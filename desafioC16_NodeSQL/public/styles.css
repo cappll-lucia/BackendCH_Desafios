@@ -1,0 +1,126 @@
+
+.main{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: max-content;
+}
+
+.productSection{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    padding: 15px 15px 15px 50px;
+    justify-content: center;
+
+}
+
+.products_form{
+    width: 60%;
+    justify-content: center;
+    padding: 15px;
+}
+
+.products_form h6{
+    padding: 20px 0;
+    font-size: x-large;
+}
+
+.products_form .form-group{
+    margin-bottom: 15px;
+}
+
+
+.form_label{
+    width: 20%;
+}
+
+.form_control{
+    width: 50%;
+}
+
+.chatSection{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    background-color: rgb(208, 216, 216);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+#chatForm{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.usrName, .email, .msjText{
+    margin-bottom:10px;
+    height: 100px;
+}
+
+.usrName, .email{
+    width: 45%;
+    height: 50px;
+}
+
+.chat{
+    margin-top: 15px;
+    margin-bottom: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.chat .message{
+    position: relative;
+    height: 100px;
+    width: 85%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin-top: 28px;
+}
+
+.chat .message:before {
+    border: 20px solid white;
+    content: '';
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    bottom: -40px;
+    left: calc(50% - 180px)
+}
+
+.chat .message .usr{
+    width: 45%;
+    color: coral;
+    margin-bottom: 0;
+    font-weight: 500;
+    padding: 0;
+
+}
+
+.chat .message .date{
+    width: 45%;
+    color: gray;
+    text-align: right;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.chat .message .msjContent{
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+
+}
+
+
+
